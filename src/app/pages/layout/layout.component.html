@@ -1,0 +1,139 @@
+<div class="layoutContainer">
+  <div class="layoutContainerHeader">
+    <div class="layoutContainerHeader1">
+      <p-button (click)="visible = true" icon="pi pi-bars"/>
+    </div>
+    <div class="layoutContainerHeader2">
+      <img src="image/layout/logo.png" alt="Logo del Colegio">
+    </div>
+    <div class="layoutContainerHeader3">
+      <div class="layoutContainerHeader3_1">
+        <p>
+          Bienvenido: <strong><i>{{ p_usuario }}</i></strong>
+        </p>
+      </div>
+      <div class="layoutContainerHeader3_2">
+        <p-overlay-badge [value]=p_number severity="success"
+                         class="inline-flex avatar"
+                         badgeSize="small">
+          <p-avatar class="p-overlay-badge"
+                    image="https://primefaces.org/cdn/primeng/images/demo/avatar/walter.jpg"
+                    size="large" shape="circle"/>
+        </p-overlay-badge>
+      </div>
+      <div class="layoutContainerHeader3_3">
+        <i class="pi pi-list profile" style="font-size: 1rem"
+           (click)="menu.toggle($event)"></i>
+        <p-tieredmenu #menu [model]="items" [popup]="true"/>
+      </div>
+    </div>
+  </div>
+  <div class="layoutContainerBody">
+    <router-outlet/>
+  </div>
+  <div class="layoutContainerFooter">
+
+    <div class="layoutContainerFooter_1">
+      <img src="/image/layout/instagram.svg" alt="Icono SVG">
+    </div>
+    <div class="layoutContainerFooter_slash">
+      /
+    </div>
+    <div class="layoutContainerFooter_1">
+      <img src="/image/layout/tiktok.svg" alt="Icono SVG">
+    </div>
+    <div class="layoutContainerFooter_slash">
+      /
+    </div>
+    <div class="layoutContainerFooter_1">
+      <img src="/image/layout/facebook.svg" alt="Icono SVG">
+    </div>
+    <div class="layoutContainerFooter_slash">
+      /
+    </div>
+    <div class="layoutContainerFooter_1">
+      <img src="/image/layout/x.svg" alt="Icono SVG">
+    </div>
+    <div class="layoutContainerFooter_slash">
+      /
+    </div>
+    <div class="layoutContainerFooter_1">
+      <img src="/image/layout/whatsapp.svg" alt="Icono SVG">
+    </div>
+    <div class="layoutContainerFooter_slash">
+      /
+    </div>
+    <div class="layoutContainerFooter_1">
+      <img src="/image/layout/youtube.svg" alt="Icono SVG">
+    </div>
+
+  </div>
+  <p-drawer #drawerRef [(visible)]="visible">
+    <ng-template #headless>
+      <div class="drawer_layout">
+        <div class="drawer_layout_header">
+          <div class="drawer_layout_header_avatar">
+            <p-avatar class="p-overlay-badge"
+                      image="https://primefaces.org/cdn/primeng/images/demo/avatar/walter.jpg"
+                      size="large" shape="circle"/>
+          </div>
+          <p>Colegio Ciencias</p>
+          <div>
+            <p-button type="button" (click)="closeCallback($event)" icon="pi pi-times" rounded="true"
+                      outlined="true" styleClass="h-8 w-8"></p-button>
+          </div>
+        </div>
+        <div class="drawer_layout_body">
+
+          <div class="drawer_layout_body_item"
+               [routerLinkActive]="['active']"
+               (click)="closeCallback($event)"
+               routerLink="/pages/roles" style="cursor: pointer">
+            <div class="drawer_layout_body_item_img">
+              <img src="image/layout/roles.png">
+            </div>
+            <p>Mantenimiento Roles</p>
+          </div>
+
+          <div class="drawer_layout_body_item"
+               [routerLinkActive]="['active']"
+               (click)="closeCallback($event)"
+               routerLink="/pages/roles" style="cursor: pointer">
+            <div class="drawer_layout_body_item_img">
+              <img src="image/layout/graduado.png">
+            </div>
+            <p>Mantenimiento Alumno</p>
+          </div>
+
+          <div class="drawer_layout_body_item"
+               [routerLinkActive]="['active']"
+               (click)="closeCallback($event)"
+               routerLink="/pages/roles" style="cursor: pointer">
+            <div class="drawer_layout_body_item_img">
+              <img src="image/layout/teacher.png">
+            </div>
+            <p>Mantenimiento Profesor</p>
+          </div>
+
+          <div class="drawer_layout_body_item"
+               [routerLinkActive]="['active']"
+               (click)="closeCallback($event)"
+               routerLink="/pages/roles" style="cursor: pointer">
+            <div class="drawer_layout_body_item_img">
+              <img src="image/layout/matricula.png">
+            </div>
+            <p>Mantenimiento Matricula</p>
+          </div>
+
+        </div>
+        <div class="drawer_layout_footer">
+          <p-button label="Salir" severity="danger"
+                    icon="pi pi-sign-out"/>
+        </div>
+      </div>
+    </ng-template>
+  </p-drawer>
+
+</div>
+
+
