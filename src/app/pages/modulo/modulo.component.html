@@ -1,1 +1,113 @@
-<p>modulo works!</p>
+<form [formGroup]="form" class="example-container" (submit)="operate()">
+  <div class="moduloContainer">
+    <div class="moduloContainerHeader">
+      <p>
+        <strong>Mantenedor de Modulos</strong>
+      </p>
+    </div>
+    <p-divider/>
+    <div class="moduloContainerBody">
+      <div class="moduloContainerBody_form">
+        <div class="moduloContainerBody_form_label">
+          <label>Modulo ID:</label>
+        </div>
+        <div class="moduloContainerBody_form_input">
+          <p-floatlabel variant="on">
+            <input pInputText id="on_label_1" formControlName="moduloId" autocomplete="off"/>
+            <label for="on_label_1">Modulo ID</label>
+          </p-floatlabel>
+        </div>
+      </div>
+      <div class="moduloContainerBody_form">
+        <div class="moduloContainerBody_form_label">
+          <label>Modulo Nombre:</label>
+        </div>
+        <div class="moduloContainerBody_form_input">
+          <p-floatlabel variant="on">
+            <input pInputText id="on_label_2" formControlName="moduloNombre" autocomplete="off"/>
+            <label for="on_label_2">Modulo Nombre</label>
+          </p-floatlabel>
+        </div>
+      </div>
+      <div class="moduloContainerBody_form">
+        <div class="moduloContainerBody_form_label">
+          <label>Modulo URL:</label>
+        </div>
+        <div class="moduloContainerBody_form_input">
+          <p-floatlabel variant="on">
+            <input pInputText id="on_label_3" formControlName="moduloUrl" autocomplete="off"/>
+            <label for="on_label_3">Modulo URL</label>
+          </p-floatlabel>
+        </div>
+      </div>
+      <div class="moduloContainerBody_form">
+        <div class="moduloContainerBody_form_label">
+          <label>Modulo Icono:</label>
+        </div>
+        <div class="moduloContainerBody_form_input">
+          <p-floatlabel variant="on">
+            <input pInputText id="on_label_4" formControlName="moduloIcono" autocomplete="off"/>
+            <label for="on_label_4">Modulo Icono</label>
+          </p-floatlabel>
+        </div>
+      </div>
+      <div class="moduloContainerBody_form">
+        <div class="moduloContainerBody_form_label">
+          <label>Fecha de Registro:</label>
+        </div>
+        <div class="moduloContainerBody_form_input">
+          <p-floatlabel variant="on">
+            <p-calendar formControlName="moduloFecRegistro" id="fechaRegistro" showIcon iconDisplay="input"></p-calendar>
+            <label for="fechaRegistro">Fecha de Registro</label>
+          </p-floatlabel>
+        </div>
+      </div>
+      <div class="moduloContainerBody_form">
+        <div class="moduloContainerBody_form_label">
+          <label>Fecha Actualizacion:</label>
+        </div>
+        <div class="moduloContainerBody_form_input">
+          <p-floatlabel variant="on">
+            <p-calendar formControlName="moduloFecActu" id="fechaActualiza" showIcon iconDisplay="input"></p-calendar>
+            <label for="fechaActualiza">Fecha Actualizacion</label>
+          </p-floatlabel>
+        </div>
+      </div>
+      <div class="moduloContainerBody_form">
+        <div class="moduloContainerBody_form_label">
+          <label>Marca Inhabilitado:</label>
+        </div>
+        <div class="moduloContainerBody_form_input">
+          <p-toggleswitch formControlName="moduloMcaInh">
+            <ng-template #handle let-checked="checked">
+              <i [ngClass]="['!text-xs', 'pi', checked ? 'pi-check' : 'pi-times']"></i>
+            </ng-template>
+          </p-toggleswitch>
+        </div>
+      </div>
+      <div class="moduloContainerBody_form">
+        <div class="moduloContainerBody_form_label">
+          <label>Modulo Detalle:</label>
+        </div>
+        <div class="moduloContainerBody_form_input">
+          <p-floatlabel variant="on">
+  <textarea
+    pTextarea
+    id="over_label"
+    formControlName="moduloInputArea"
+    rows="5"
+    cols="30"
+    style="resize: none"
+    class="h-full">
+  </textarea>
+            <label for="over_label">Descripción</label>
+          </p-floatlabel>
+        </div>
+      </div>
+    </div>
+    <div class="moduloContainerBody_button">
+      <p-button label="Aceptar" variant="text" [raised]="true" severity="success"/>
+      <p-button label="Cancelar" variant="text" [raised]="true" severity="danger"/>
+    </div>
+  </div>
+</form>

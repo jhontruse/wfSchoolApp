@@ -39,6 +39,7 @@ body, html {
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
+  border: 5px solid #245a98;
 }
 
 .layoutContainerFooter {
@@ -187,7 +188,6 @@ body, html {
   background-image: url("/image/layout/navbar.jpg");
   background-size: cover;
   background-position: center;
-
 }
 
 .drawer_layout_header {
@@ -253,5 +253,6 @@ body, html {
   width: 100%;
   height: 100%;
   object-fit: contain; /* Ajusta la imagen sin recortar */
+
 }
 
