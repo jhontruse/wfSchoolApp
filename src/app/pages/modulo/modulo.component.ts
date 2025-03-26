@@ -7,7 +7,6 @@ import {InputTextModule} from 'primeng/inputtext';
 import {CalendarModule} from 'primeng/calendar';
 import {FloatLabelModule} from 'primeng/floatlabel';
 import {ToggleSwitch} from 'primeng/toggleswitch';
-import {NgClass} from '@angular/common';
 import {FormGroup} from '@angular/forms';
 
 @Component({
@@ -21,8 +20,7 @@ import {FormGroup} from '@angular/forms';
     CalendarModule,
     FloatLabelModule,
     ReactiveFormsModule,
-    ToggleSwitch,
-    NgClass,
+    ToggleSwitch
   ],
   templateUrl: './modulo.component.html',
   styleUrl: './modulo.component.css'

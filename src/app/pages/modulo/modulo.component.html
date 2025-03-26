@@ -57,7 +57,8 @@
         </div>
         <div class="moduloContainerBody_form_input">
           <p-floatlabel variant="on">
-            <p-calendar formControlName="moduloFecRegistro" id="fechaRegistro" showIcon iconDisplay="input"></p-calendar>
+            <p-calendar formControlName="moduloFecRegistro" id="fechaRegistro" showIcon
+                        iconDisplay="input"></p-calendar>
             <label for="fechaRegistro">Fecha de Registro</label>
           </p-floatlabel>
         </div>
@@ -78,11 +79,7 @@
           <label>Marca Inhabilitado:</label>
         </div>
         <div class="moduloContainerBody_form_input">
-          <p-toggleswitch formControlName="moduloMcaInh">
-            <ng-template #handle let-checked="checked">
-              <i [ngClass]="['!text-xs', 'pi', checked ? 'pi-check' : 'pi-times']"></i>
-            </ng-template>
-          </p-toggleswitch>
+          <p-toggleswitch formControlName="moduloMcaInh"/>
         </div>
       </div>
       <div class="moduloContainerBody_form">
@@ -90,18 +87,8 @@
           <label>Modulo Detalle:</label>
         </div>
         <div class="moduloContainerBody_form_input">
-          <p-floatlabel variant="on">
-  <textarea
-    pTextarea
-    id="over_label"
-    formControlName="moduloInputArea"
-    rows="5"
-    cols="30"
-    style="resize: none"
-    class="h-full">
-  </textarea>
-            <label for="over_label">Descripción</label>
-          </p-floatlabel>
+          <textarea rows="5" cols="30" pTextarea
+                    formControlName="moduloInputArea"></textarea>
         </div>
       </div>
     </div>
