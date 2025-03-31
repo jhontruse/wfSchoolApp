@@ -1,0 +1,707 @@
+.containerLogin {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  background-image: url('/image/login/wallpaperLogin.png');
+  background-size: cover; /* Ajusta la imagen sin distorsionarla */
+  background-attachment: fixed; /* Fija la imagen al fondo */
+  background-position: center; /* Centra la imagen */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+}
+
+.loginCard {
+  width: 40%;
+  height: 75%;
+  /*border: 3px solid white;*/
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  box-shadow: 20px 20px 60px; /* Sombra sin desenfoque */
+  box-shadow: 20px 20px 60px; /* Sombra con ligero desenfoque */
+  box-shadow: 20px 20px 60px; /* Sombra desenfocada */
+  box-shadow: 20px 20px 60px;
+}
+
+.loginCardHeader {
+  width: 100%;
+  height: 40%;
+  background: url('/image/login/wallpaperLogin_ori.png') no-repeat center center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*border: 3px solid #af1313;*/
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.loginCardBody {
+  width: 100%;
+  height: 60%;
+  background: white;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.loginCardBodyTitle {
+  width: 70%;
+  height: 9%;
+  margin-top: 1%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: nowrap;
+}
+
+.loginCardBodyCredenciales {
+  width: 70%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.loginCardBodyTitle p {
+  padding: 0px;
+  border: 0px;
+  margin: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.3rem;
+  letter-spacing: 2px;
+  color: rgba(9, 4, 3, 0.7);
+}
+
+.input-container {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  width: 100%;
+  /*border: 1px solid red;*/
+}
+
+.input-container2 {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  /*border: 1px solid #083eb4;*/
+}
+
+.input-container2 #recuerdaId {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  /*border: 1px solid #083eb4;*/
+}
+
+.input-container2 #recuperaPass {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: flex-end;
+  justify-content: flex-end;
+  /*border: 1px solid #f3e231;*/
+}
+
+.input-container2Check {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  justify-content: center;
+}
+
+.input-container2 #recuerdaId p {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  margin-left: 5px;
+  padding: 0;
+  border: 0;
+  color: #d9720d;
+  /*border: 1px solid red;*/
+}
+
+.input-container2 #recuperaPass p {
+  text-align: right;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  margin-left: 5px;
+  padding: 0;
+  border: 0;
+  color: #d9720d;
+  /*border: 1px solid red;*/
+}
+
+.input-container input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  background: rgba(231, 112, 28, 0.21);
+  border-radius: 25px;
+  outline: none;
+  font-size: 16px;
+  color: darkorange;
+  transition: border-bottom 0.3s ease-in-out;
+}
+
+.input-container input:focus {
+  border-bottom: 3px solid #d9530d;
+}
+
+.input-container label {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: #d9720d;
+  transition: 0.3s ease-in-out;
+}
+
+.input-container input:focus + label,
+.input-container input:not(:placeholder-shown) + label {
+  top: -18px;
+  left: 5px;
+  font-size: 15px;
+  color: #d9530d;
+}
+
+
+/* Botones */
+.btn-ripple {
+  background-color: #d9530d;
+  width: 100%;
+  color: white;
+  padding: 10px 25px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 12px;
+  transition: transform 0.1s ease;
+}
+
+.btn-ripple:active {
+  transform: scale(0.95);
+}
+
+/* Botones */
+
+.input-container3 {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  /*border: 1px solid #083eb4;*/
+}
+
+.input-container3 p {
+  margin: 0px;
+  padding: 0px;
+  border: 0;
+  color: #d9530d;
+}
+
+/* Pantallas medianas (tablets) */
+@media (max-width: 1024px) {
+  .containerLogin {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    background-image: url('/image/login/wallpaperLogin.png');
+    background-size: cover; /* Ajusta la imagen sin distorsionarla */
+    background-attachment: fixed; /* Fija la imagen al fondo */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+  }
+
+  .loginCard {
+    width: 75%;
+    height: 75%;
+    /*border: 3px solid #153ace;*/
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    box-shadow: 20px 20px 60px; /* Sombra sin desenfoque */
+    box-shadow: 20px 20px 60px; /* Sombra con ligero desenfoque */
+    box-shadow: 20px 20px 60px; /* Sombra desenfocada */
+    box-shadow: 20px 20px 60px;
+  }
+
+  .loginCardHeader {
+    width: 100%;
+    height: 50%;
+    background: url('/image/login/wallpaperLogin_ori.png') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*border: 3px solid #153ace;*/
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+
+  .loginCardBody {
+    width: 100%;
+    height: 50%;
+    background: white;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+    /*border: 3px solid #a615ce;*/
+  }
+
+  .loginCardBodyTitle {
+    width: 70%;
+    height: 15%;
+    margin-top: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: nowrap;
+    /*border: 3px solid #a615ce;*/
+  }
+
+  .loginCardBodyCredenciales {
+    width: 70%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: nowrap;
+    /*border: 3px solid #15bfce;*/
+  }
+
+  .loginCardBodyTitle p {
+    padding: 0px;
+    border: 0px;
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2.2rem;
+    letter-spacing: 2.5px;
+    color: rgba(9, 4, 3, 0.7);
+    /*border: 3px solid #aa24de;*/
+  }
+
+  .input-container {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    width: 100%;
+    /*border: 1px solid red;*/
+  }
+
+  .input-container input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    background: rgba(231, 112, 28, 0.21);
+    border-radius: 25px;
+    outline: none;
+    font-size: 16px;
+    color: darkorange;
+    transition: border-bottom 0.3s ease-in-out;
+  }
+
+  .input-container input:focus {
+    border-bottom: 3px solid #d9530d;
+  }
+
+  .input-container label {
+    position: absolute;
+    top: 4px;
+    left: 15px;
+    color: #d9720d;
+    transition: 0.3s ease-in-out;
+    font-size: 1.8rem;
+  }
+
+  .input-container input:focus + label,
+  .input-container input:not(:placeholder-shown) + label {
+    top: -24px;
+    left: 5px;
+    font-size: 20px;
+    color: #d9530d;
+  }
+
+  .input-container2 {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    /*border: 1px solid #083eb4;*/
+    font-size: 1.7rem;
+  }
+
+  .input-container2 #recuerdaId {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    /*border: 1px solid #083eb4;*/
+  }
+
+  .input-container2 #recuperaPass {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: flex-end;
+    justify-content: flex-end;
+    /*border: 1px solid #f3e231;*/
+  }
+
+  .input-container2Check {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    justify-content: center;
+  }
+
+  .input-container2 #recuerdaId p {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    margin-left: 5px;
+    padding: 0;
+    border: 0;
+    color: #d9720d;
+    /*border: 1px solid red;*/
+  }
+
+  .input-container2 #recuperaPass p {
+    text-align: right;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    margin-left: 5px;
+    padding: 0;
+    border: 0;
+    color: #d9720d;
+    /*border: 1px solid red;*/
+  }
+
+
+  /* Botones */
+  .btn-ripple {
+    background-color: #d9530d;
+    width: 100%;
+    color: white;
+    padding: 10px 25px;
+    border: none;
+    cursor: pointer;
+    font-size: 2rem;
+    border-radius: 12px;
+    transition: transform 0.1s ease;
+  }
+
+  .btn-ripple:active {
+    transform: scale(0.95);
+  }
+
+  /* Botones */
+  .input-container3 {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    /*border: 1px solid #083eb4;*/
+  }
+
+  .input-container3 p {
+    margin: 0px;
+    padding: 0px;
+    border: 0;
+    color: #d9530d;
+    font-size: 1.7rem;
+  }
+}
+
+/* Pantallas pequeñas (móviles) */
+@media (max-width: 600px) {
+  .containerLogin {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    background-image: url('/image/login/wallpaperLogin.png');
+    background-size: cover; /* Ajusta la imagen sin distorsionarla */
+    background-attachment: fixed; /* Fija la imagen al fondo */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+  }
+
+  .loginCard {
+    width: 90%;
+    height: 85%;
+    /*border: 3px solid #153ace;*/
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    box-shadow: 20px 20px 60px; /* Sombra sin desenfoque */
+    box-shadow: 20px 20px 60px; /* Sombra con ligero desenfoque */
+    box-shadow: 20px 20px 60px; /* Sombra desenfocada */
+    box-shadow: 20px 20px 60px;
+  }
+
+  .loginCardHeader {
+    width: 100%;
+    height: 40%;
+    background: url('/image/login/wallpaperLogin_ori.png') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*border: 3px solid #153ace;*/
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+
+  .loginCardBody {
+    width: 100%;
+    height: 60%;
+    background: white;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+    /*border: 3px solid #79ef0c;*/
+  }
+
+  .loginCardBodyTitle {
+    width: 90%;
+    height: 10%;
+    margin-top: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: nowrap;
+    /*border: 3px solid #a615ce;*/
+  }
+
+  .loginCardBodyCredenciales {
+    width: 90%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: nowrap;
+    /*border: 3px solid #15bfce;*/
+  }
+
+  .loginCardBodyTitle p {
+    padding: 0px;
+    border: 0px;
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    letter-spacing: 2.5px;
+    color: rgba(9, 4, 3, 0.7);
+    /*border: 3px solid #aa24de;*/
+  }
+
+  .input-container {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    width: 100%;
+    /*border: 1px solid red;*/
+  }
+
+  .input-container input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    background: rgba(231, 112, 28, 0.21);
+    border-radius: 25px;
+    outline: none;
+    font-size: 14px;
+    color: darkorange;
+    transition: border-bottom 0.3s ease-in-out;
+  }
+
+  .input-container input:focus {
+    border-bottom: 3px solid #d9530d;
+  }
+
+  .input-container label {
+    position: absolute;
+    top: 8px;
+    left: 15px;
+    color: #d9720d;
+    transition: 0.3s ease-in-out;
+    font-size: 1.2rem;
+  }
+
+  .input-container input:focus + label,
+  .input-container input:not(:placeholder-shown) + label {
+    top: -18px;
+    left: 15px;
+    font-size: 0.9rem;
+    color: #d9530d;
+  }
+
+  .input-container2 {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    /*border: 1px solid #083eb4;*/
+    font-size: 0.9rem;
+  }
+
+  .input-container2 #recuerdaId {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    /*border: 1px solid #083eb4;*/
+  }
+
+  .input-container2 #recuperaPass {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: flex-end;
+    justify-content: flex-end;
+    /*border: 1px solid #f3e231;*/
+  }
+
+  .input-container2Check {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    justify-content: center;
+  }
+
+  .input-container2 #recuerdaId p {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    margin-left: 5px;
+    padding: 0;
+    border: 0;
+    color: #d9720d;
+    /*border: 1px solid red;*/
+  }
+
+  .input-container2 #recuperaPass p {
+    text-align: right;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    margin-left: 5px;
+    padding: 0;
+    border: 0;
+    color: #d9720d;
+    /*border: 1px solid red;*/
+  }
+
+
+  /* Botones */
+  .btn-ripple {
+    background-color: #d9530d;
+    width: 100%;
+    color: white;
+    padding: 10px 25px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.3rem;
+    border-radius: 12px;
+    transition: transform 0.1s ease;
+  }
+
+  .btn-ripple:active {
+    transform: scale(0.95);
+  }
+
+  /* Botones */
+  .input-container3 {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    /*border: 1px solid #083eb4;*/
+  }
+
+  .input-container3 p {
+    margin: 0px;
+    padding: 0px;
+    border: 0;
+    color: #d9530d;
+    font-size: 1rem;
+  }
+}

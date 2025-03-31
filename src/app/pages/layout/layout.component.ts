@@ -38,27 +38,14 @@ export class LayoutComponent implements OnInit {
         icon: 'pi pi-home',
       },
       {
-        separator: true
+        label: 'Usuarios',
+        icon: 'pi pi-users',
       },
       {
-        label: 'Mi perfil',
-        icon: 'pi pi-user'
-      },
-      {
-        separator: true
-      },
-      {
-        label: 'Configuracion',
-        icon: 'pi pi-cog'
-      },
-      {
-        separator: true
-      },
-      {
-        label: 'Salir',
-        icon: 'pi pi-sign-out'
+        label: 'Configuración',
+        icon: 'pi pi-cog',
       }
-    ]
+    ];
   }
 
 
