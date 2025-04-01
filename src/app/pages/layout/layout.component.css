@@ -14,7 +14,7 @@ body, html {
   flex-wrap: nowrap;
   justify-content: flex-start;
   align-items: stretch;
-  background-image: url("/image/layout/wallpaper.jpg");
+  background-image: url("/image/layout/wallpaperLogin.png");
   background-size: cover;
   background-position: center;
 }

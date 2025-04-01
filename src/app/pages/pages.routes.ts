@@ -1,6 +1,7 @@
 import {Routes} from '@angular/router';
 import {RolesComponent} from './roles/roles.component';
 import {ModuloComponent} from './modulo/modulo.component';
+import {Not404Component} from './not404/not404.component';
 
 export const pagesRoutes: Routes = [
   //{ path: 'dashboard', component: DashboardComponent, canActivate: [certGuard] },
@@ -27,5 +28,5 @@ export const pagesRoutes: Routes = [
   {path: 'modulo', component: ModuloComponent, /*canActivate: [certGuard]*/},
   //{ path: 'report', component: ReportComponent, canActivate: [certGuard] },
   //{ path: 'not-403', component: Not403Component},
-  //{ path: 'not-404', component: Not404Component}
+  { path: 'not-404', component: Not404Component}
 ];
